@@ -24,7 +24,7 @@ if __name__ == '__main__':
                         metavar='wallet budget',
                         help='choisir le budget max pour le portefeuille')
     parser.add_argument('algo', choices=list(options.keys()),
-                        help='Algo a choisir parmis: %(choices)s')
+                        help='Algo a choisir parmi: %(choices)s')
 
     args = parser.parse_args()
     data_filename = args.f
