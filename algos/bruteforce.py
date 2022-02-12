@@ -21,6 +21,7 @@ def bruteforce(budget, items, name, price, profit_percentage):
 
     # Determine toutes les combinaisons de portefeuille possible
     all_wallet_combinations = determine_all_combinations(shares_list)
+    # Supprime la première valeur car nulle
     del all_wallet_combinations[0]
 
     # Initialise la liste de tous les portefeuilles

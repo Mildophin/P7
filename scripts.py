@@ -1,4 +1,4 @@
-
+from time import time
 import argparse
 import algos.bruteforce as algo_a
 import algos.optimized as algo_b
@@ -58,4 +58,7 @@ if __name__ == '__main__':
 
     print(f"\n{item_removed_exceeded} actions supprimées (dépassant la taille du portefeuille)")
     print(f"\n{item_removed_null} actions supprimées (valeur nulle)\n")
+    start = time()
     launch_algo(budget, items, name, price, profit_percentage)
+    tmp_stot = "{:.8f}".format(time() - start)
+    print("Calcul réalisé en ", tmp_stot, " sec")
