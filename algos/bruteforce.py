@@ -12,7 +12,7 @@ def determine_all_combinations(shares_list):
     return all_wallet_combinations
 
 
-def bruteforce(k, items, name, price, profit_percentage):
+def bruteforce(budget, items, name, price, profit_percentage):
 
     # Premièrement, calcul le profit avec le prix et le pourcentage de rentabilité
     shares_list = utils.dataset.readable_data(name, price,
@@ -41,7 +41,7 @@ def bruteforce(k, items, name, price, profit_percentage):
             wallet_profit = wallet_profit + share[2]
 
         # Garde seulement les portefeuilles où le prix total est inférieur à 500
-        if wallet_price > (k * 100):
+        if wallet_price > (budget * 100):
             pass
         else:
             wallet = [wallet_name, wallet_price, wallet_profit]

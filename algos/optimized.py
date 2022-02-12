@@ -2,10 +2,10 @@ import numpy as np
 import utils.dataset
 
 
-def optimized(k, items, name, price, profit_percentage):
+def optimized(initial_budget, items, name, price, profit_percentage):
 
     # Budget mis à jour, car le prix et le pourcentage était multiplié par 100
-    budget = k * 100
+    budget = initial_budget * 100
 
     # Premièrement, calcul le profit avec le prix et le pourcentage de profit
     shares_list = utils.dataset.readable_data(name, price,
